@@ -567,7 +567,10 @@ export default function AdminPage() {
         <span className="text-6xl">🚫</span>
         <h1 className="font-orbitron font-black text-white text-xl">Not Authorized</h1>
         <p className="text-white/40 font-rajdhani text-sm">Your account doesn't have admin access.</p>
-        <p className="text-white/20 font-mono text-xs bg-white/5 px-4 py-2 rounded-lg">Signed in as: {user.email}</p>
+        <div className="bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-left space-y-1.5 max-w-sm w-full">
+          <p className="text-white/30 font-mono text-xs">signed in as: <span className="text-[#00FFFF]">{user.email}</span></p>
+          <p className="text-white/30 font-mono text-xs">admin email set to: <span className="text-[#FFD700]">{ADMIN_EMAIL || "(not set — any user gets access)"}</span></p>
+        </div>
         <div className="flex gap-3">
           <Link to="/" className="px-6 py-3 bg-[#8B00FF] text-white rounded-full font-rajdhani font-bold text-sm tracking-wider">Back to Site</Link>
           <button onClick={() => signOut().then(() => window.location.reload())} className="px-6 py-3 border border-white/15 text-white/50 rounded-full font-rajdhani font-bold text-sm tracking-wider hover:border-white/30 transition-all">Sign Out</button>
