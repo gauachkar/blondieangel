@@ -71,7 +71,7 @@ export default function FantasySpinner({ onClose }: Props) {
 
   return (
     <div className="fixed inset-0 z-[100] modal-backdrop bg-black/85 flex items-center justify-center p-4">
-      <div className="w-full max-w-lg gradient-border-card rounded-3xl p-8 text-center"
+      <div className="w-full max-w-lg gradient-border-card rounded-3xl p-5 sm:p-8 text-center"
         style={{ boxShadow: "0 0 60px #8B00FF22" }}>
 
         {/* Header */}

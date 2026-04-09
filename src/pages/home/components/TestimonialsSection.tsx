@@ -57,7 +57,7 @@ const TESTIMONIALS = [
 
 export default function TestimonialsSection() {
   return (
-    <section id="reviews" className="relative w-full bg-[#080808] py-24 overflow-hidden">
+    <section id="reviews" className="relative w-full bg-[#080808] py-16 md:py-24 overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#8B00FF]/40 to-transparent" />
       <div className="absolute top-1/2 right-0 w-80 h-80 bg-[#FF1493]/4 rounded-full blur-[80px] pointer-events-none" />
 

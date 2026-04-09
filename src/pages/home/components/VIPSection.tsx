@@ -37,7 +37,7 @@ const TIERS = [
 
 export default function VIPSection() {
   return (
-    <section id="vip" className="relative w-full bg-[#0A0A0A] py-24 overflow-hidden">
+    <section id="vip" className="relative w-full bg-[#0A0A0A] py-16 md:py-24 overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FFD700]/40 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-b from-[#8B00FF]/4 via-transparent to-[#FF1493]/4 pointer-events-none" />
 
@@ -57,9 +57,9 @@ export default function VIPSection() {
         </div>
 
         {/* Perks grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 mb-12 md:mb-16">
           {VIP_PERKS.map((perk) => (
-            <div key={perk.title} className="gradient-border-card rounded-2xl p-5 hover:-translate-y-1 transition-all duration-300">
+            <div key={perk.title} className="gradient-border-card rounded-2xl p-4 md:p-5 hover:-translate-y-1 transition-all duration-300">
               <span className="text-3xl block mb-3">{perk.icon}</span>
               <h3 className="font-rajdhani font-bold text-white text-base mb-1">{perk.title}</h3>
               <p className="text-white/50 text-xs font-inter leading-relaxed">{perk.desc}</p>
@@ -72,7 +72,7 @@ export default function VIPSection() {
           {TIERS.map((tier) => (
             <div
               key={tier.name}
-              className={`relative rounded-3xl p-8 border transition-all duration-300 hover:-translate-y-2 ${
+              className={`relative rounded-3xl p-6 md:p-8 border transition-all duration-300 hover:-translate-y-2 ${
                 tier.featured
                   ? "border-[#FF1493]/60 bg-gradient-to-b from-[#FF1493]/10 to-[#8B00FF]/10"
                   : "border-white/8 bg-[#111]"

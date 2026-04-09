@@ -85,14 +85,14 @@ export default function MenuSection({ onChatOpen }: Props) {
   const active = MENU_ITEMS.find((m) => m.id === selected);
 
   return (
-    <section id="menu" className="relative w-full bg-[#0A0A0A] py-24 overflow-hidden">
+    <section id="menu" className="relative w-full bg-[#0A0A0A] py-16 md:py-24 overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#8B00FF]/40 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FF1493]/30 to-transparent" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#8B00FF]/4 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <div className="inline-flex items-center gap-2 text-[#FF1493] text-xs font-rajdhani font-bold tracking-widest uppercase mb-4">
             <div className="h-px w-8 bg-[#FF1493]" />
             Services Menu
@@ -138,7 +138,7 @@ export default function MenuSection({ onChatOpen }: Props) {
 
           {/* Right: Detail + pricing */}
           {active && (
-            <div className="lg:col-span-2 gradient-border-card rounded-3xl p-8">
+            <div className="lg:col-span-2 gradient-border-card rounded-3xl p-5 sm:p-8">
               {/* Header */}
               <div className="flex items-start gap-4 mb-6">
                 <div className="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0"

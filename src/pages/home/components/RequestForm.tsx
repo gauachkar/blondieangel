@@ -19,7 +19,7 @@ export default function RequestForm() {
   };
 
   return (
-    <section id="request" className="relative w-full bg-[#080808] py-24 overflow-hidden">
+    <section id="request" className="relative w-full bg-[#080808] py-16 md:py-24 overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#8B00FF]/40 to-transparent" />
       <div className="absolute top-1/2 right-0 w-72 h-72 bg-[#8B00FF]/5 rounded-full blur-[80px] pointer-events-none" />
 
@@ -37,7 +37,7 @@ export default function RequestForm() {
         </div>
 
         {submitted ? (
-          <div className="gradient-border-card rounded-3xl p-12 text-center">
+          <div className="gradient-border-card rounded-3xl p-8 sm:p-12 text-center">
             <span className="text-7xl block mb-6 float-anim">👾</span>
             <h3 className="font-orbitron font-bold text-2xl text-white mb-3">Got it. You're in my queue now. 👑</h3>
             <p className="text-white/60 font-inter text-base mb-6">
@@ -51,7 +51,7 @@ export default function RequestForm() {
             </button>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="gradient-border-card rounded-3xl p-8 space-y-6">
+          <form onSubmit={handleSubmit} className="gradient-border-card rounded-3xl p-5 sm:p-8 space-y-5 sm:space-y-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
                 <label className="block text-[#00FFFF] text-xs font-rajdhani font-bold tracking-widest uppercase mb-2">Your Name / Handle *</label>

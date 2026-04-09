@@ -93,7 +93,7 @@ export default function ChatSimulator({ onClose }: Props) {
         style={{ boxShadow: "0 0 60px #8B00FF22, 0 0 120px #FF149311" }}>
 
         {/* Header */}
-        <div className="flex items-center gap-4 px-6 py-4 bg-gradient-to-r from-[#8B00FF]/20 to-[#FF1493]/10 border-b border-[#8B00FF]/25 flex-shrink-0">
+        <div className="flex items-center gap-3 px-4 py-3 sm:px-6 sm:py-4 bg-gradient-to-r from-[#8B00FF]/20 to-[#FF1493]/10 border-b border-[#8B00FF]/25 flex-shrink-0">
           {/* Avatar */}
           <div className="relative w-12 h-12 rounded-full bg-gradient-to-br from-[#8B00FF] to-[#FF1493] flex items-center justify-center text-xl flex-shrink-0">
             <span>👾</span>
@@ -148,7 +148,7 @@ export default function ChatSimulator({ onClose }: Props) {
         </div>
 
         {/* Quick replies */}
-        <div className="px-5 py-3 flex gap-2 overflow-x-auto flex-shrink-0 border-t border-[#8B00FF]/15">
+        <div className="px-4 py-3 flex gap-2 overflow-x-auto flex-shrink-0 border-t border-[#8B00FF]/15">
           {QUICK_REPLIES.map((qr) => (
             <button
               key={qr}
@@ -161,7 +161,7 @@ export default function ChatSimulator({ onClose }: Props) {
         </div>
 
         {/* Input */}
-        <div className="px-5 py-4 flex gap-3 border-t border-[#8B00FF]/20 flex-shrink-0">
+        <div className="px-4 py-3 sm:px-5 sm:py-4 flex gap-3 border-t border-[#8B00FF]/20 flex-shrink-0">
           <input
             ref={inputRef}
             type="text"
@@ -169,7 +169,7 @@ export default function ChatSimulator({ onClose }: Props) {
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && sendMessage(input)}
             placeholder="Tell me what you want..."
-            className="flex-1 bg-[#111]/80 border border-white/10 hover:border-[#8B00FF]/40 focus:border-[#8B00FF] text-white placeholder-white/25 px-4 py-3 rounded-2xl font-inter text-sm outline-none transition-all"
+            className="flex-1 bg-[#111]/80 border border-white/10 hover:border-[#8B00FF]/40 focus:border-[#8B00FF] text-white placeholder-white/25 px-4 py-3 rounded-2xl font-inter text-base sm:text-sm outline-none transition-all"
           />
           <button
             onClick={() => sendMessage(input)}

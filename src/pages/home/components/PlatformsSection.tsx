@@ -8,7 +8,7 @@ const PLATFORMS = [
 
 export default function PlatformsSection() {
   return (
-    <section id="platforms" className="relative w-full bg-[#080808] py-24 overflow-hidden">
+    <section id="platforms" className="relative w-full bg-[#080808] py-16 md:py-24 overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#8B00FF]/30 to-transparent" />
       <div className="absolute top-1/2 right-0 w-72 h-72 bg-[#00FFFF]/4 rounded-full blur-[80px] pointer-events-none" />
 

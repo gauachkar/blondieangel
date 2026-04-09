@@ -3,7 +3,7 @@ import { useState } from "react";
 const FAQS = [
   {
     q: "Who exactly is Blondie Angel?",
-    a: "Me. 18, dominant, anime gamer brat, and full-time content creator running a legit LLC in Arizona. I do text sessions, findom, feet content, anime RP, and gamer companion sessions. This is my real job and I love it. Any other questions?",
+    a: "Me. 18, dominant, anime gamer brat, and full-time content creator. I do text sessions, findom, feet content, anime RP, and gamer companion sessions. This is my real life and I love every second of it. Any other questions?",
   },
   {
     q: "How do sessions actually work?",
@@ -39,7 +39,7 @@ export default function FAQSection() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="relative w-full bg-[#0A0A0A] py-24 overflow-hidden">
+    <section id="faq" className="relative w-full bg-[#0A0A0A] py-16 md:py-24 overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00FFFF]/30 to-transparent" />
       <div className="absolute top-1/2 left-0 w-72 h-72 bg-[#8B00FF]/4 rounded-full blur-[80px] pointer-events-none" />
 
@@ -65,7 +65,7 @@ export default function FAQSection() {
               }`}
             >
               <button
-                className="w-full flex items-center justify-between px-6 py-5 text-left"
+                className="w-full flex items-center justify-between px-5 py-4 md:px-6 md:py-5 text-left"
                 onClick={() => setOpen(open === i ? null : i)}
               >
                 <span className={`font-rajdhani font-bold text-base pr-4 ${open === i ? "text-[#00FFFF]" : "text-white"}`}>
@@ -79,7 +79,7 @@ export default function FAQSection() {
                 </span>
               </button>
               {open === i && (
-                <div className="px-6 pb-5 slide-down">
+                <div className="px-5 pb-4 md:px-6 md:pb-5 slide-down">
                   <p className="text-white/60 font-inter text-sm leading-relaxed border-t border-[#8B00FF]/20 pt-4">
                     {faq.a}
                   </p>

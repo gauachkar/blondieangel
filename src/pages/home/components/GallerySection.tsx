@@ -15,7 +15,7 @@ export default function GallerySection() {
   const [lightbox, setLightbox] = useState<typeof GALLERY_ITEMS[0] | null>(null);
 
   return (
-    <section id="gallery" className="relative w-full bg-[#080808] py-24 overflow-hidden">
+    <section id="gallery" className="relative w-full bg-[#080808] py-16 md:py-24 overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FF1493]/40 to-transparent" />
       <div className="absolute top-1/3 right-0 w-72 h-72 bg-[#8B00FF]/5 rounded-full blur-[80px] pointer-events-none" />
 
@@ -84,7 +84,7 @@ export default function GallerySection() {
           onClick={() => setLightbox(null)}
         >
           <div
-            className="gradient-border-card rounded-3xl p-10 max-w-md w-full text-center"
+            className="gradient-border-card rounded-3xl p-6 sm:p-10 max-w-md w-full text-center"
             onClick={(e) => e.stopPropagation()}
           >
             <span className="text-8xl block mb-6">{lightbox.locked ? "🔒" : lightbox.emoji}</span>

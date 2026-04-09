@@ -37,7 +37,7 @@ export default function LiveStatusSection() {
   const [today] = useState(() => DAYS[new Date().getDay() === 0 ? 6 : new Date().getDay() - 1]);
 
   return (
-    <section id="status" className="relative w-full bg-[#0A0A0A] py-20 overflow-hidden">
+    <section id="status" className="relative w-full bg-[#0A0A0A] py-14 md:py-20 overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#8B00FF]/4 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6">
@@ -76,7 +76,8 @@ export default function LiveStatusSection() {
         </div>
 
         {/* Weekly calendar */}
-        <div className="grid grid-cols-7 gap-2 md:gap-3">
+        <div className="overflow-x-auto -mx-2 px-2 pb-2">
+        <div className="grid grid-cols-7 gap-2 md:gap-3 min-w-[480px]">
           {DAYS.map((day) => {
             const slots = AVAILABILITY[day] ?? [];
             const isToday = day === today;
@@ -115,6 +116,7 @@ export default function LiveStatusSection() {
               </div>
             );
           })}
+        </div>
         </div>
 
         {/* Legend */}

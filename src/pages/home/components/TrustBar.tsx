@@ -1,12 +1,12 @@
 const TRUST_ITEMS = [
-  { icon: "👑", label: "Real Brat. Real Business." },
+  { icon: "👑", label: "Real Brat. Real Damage." },
   { icon: "✅", label: "Verified 18+ Creator" },
   { icon: "💸", label: "Pay Up & Enjoy It" },
   { icon: "🛡️", label: "Discreet & Secure" },
   { icon: "⚡", label: "Fast Response · No Waiting" },
   { icon: "🌟", label: "10,000+ Drained & Delighted" },
   { icon: "🎮", label: "Gamer. Dominant. Yours." },
-  { icon: "🔒", label: "Arizona LLC · All Legal" },
+  { icon: "🔒", label: "Verified Menace · All Real" },
 ];
 
 export default function TrustBar() {

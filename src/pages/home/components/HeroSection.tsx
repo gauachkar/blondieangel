@@ -131,7 +131,7 @@ export default function HeroSection({ onChatOpen }: Props) {
                 key={item}
                 href={`#${item.toLowerCase()}`}
                 onClick={() => setMenuOpen(false)}
-                className="block py-3 text-white/60 hover:text-[#00FFFF] font-rajdhani font-semibold tracking-widest uppercase text-sm border-b border-white/5"
+                className="block py-4 text-white/60 hover:text-[#00FFFF] font-rajdhani font-semibold tracking-widest uppercase text-sm border-b border-white/5"
               >
                 {item}
               </a>
@@ -147,13 +147,13 @@ export default function HeroSection({ onChatOpen }: Props) {
       </nav>
 
       {/* Hero content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pt-28 pb-16">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pt-20 pb-10 md:pt-28 md:pb-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             {/* Live badge */}
             <div className="inline-flex items-center gap-2 bg-[#8B00FF]/15 border border-[#8B00FF]/40 text-[#00FFFF] text-xs font-rajdhani font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-6">
               <span className="w-2 h-2 bg-[#00FF00] rounded-full animate-pulse" />
-              Online Now · Arizona LLC · 18+ Verified
+              Online Now · 18+ Verified · Real Brat
             </div>
 
             {/* Main headline */}
@@ -169,11 +169,11 @@ export default function HeroSection({ onChatOpen }: Props) {
             </div>
 
             <p className="text-white/60 text-base leading-relaxed mb-8 font-inter max-w-xl">
-              18 years old, dominant anime gamer brat, and I already turned my passion into a <em className="text-[#FF1493] not-italic font-semibold">full-time LLC business</em> in Arizona. My body, my rules, my income. I provide for my loved ones doing exactly what I love. Real sessions. Real me. Pay up.
+              18 years old, dominant anime gamer brat, and I do exactly what I love every single day. Gaming, anime, chaos, and draining wallets — this is my world and you're just visiting. Real sessions. Real me. <em className="text-[#FF1493] not-italic font-semibold">Pay up.</em>
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 mb-8 md:mb-12">
               <button
                 onClick={onChatOpen}
                 className="group flex items-center justify-center gap-3 bg-gradient-to-r from-[#8B00FF] to-[#FF1493] text-white px-8 py-4 rounded-full font-rajdhani font-bold text-base tracking-wider transition-all duration-300 hover:scale-105 hover:opacity-90 neon-border-purple"
@@ -189,12 +189,12 @@ export default function HeroSection({ onChatOpen }: Props) {
             </div>
 
             {/* Stats */}
-            <div className="flex flex-wrap gap-8 pt-8 border-t border-white/8">
+            <div className="grid grid-cols-2 gap-x-6 gap-y-5 sm:flex sm:flex-wrap sm:gap-8 pt-8 border-t border-white/8">
               {[
                 { val: "18", label: "Years Young" },
                 { val: "10K+", label: "Happy Clients" },
                 { val: "∞", label: "Anime Watched" },
-                { val: "LLC", label: "Verified Business" },
+                { val: "100%", label: "That Girl" },
               ].map((s) => (
                 <div key={s.label}>
                   <div className="font-orbitron font-black text-2xl neon-text-purple">{s.val}</div>
