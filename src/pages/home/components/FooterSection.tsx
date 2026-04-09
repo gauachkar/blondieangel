@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import { useAuth } from "../../../contexts/AuthContext";
+
 const NAV = [
   { label: "About", href: "#about" },
   { label: "Menu", href: "#menu" },
@@ -17,6 +20,10 @@ const PLATFORMS = [
 interface Props { onAdminOpen: () => void; }
 
 export default function FooterSection({ onAdminOpen }: Props) {
+  const { user } = useAuth();
+  const ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL ?? "";
+  const isAdmin = !!user && (!ADMIN_EMAIL || user.email === ADMIN_EMAIL);
+
   return (
     <footer className="relative w-full bg-[#060606] border-t border-[#8B00FF]/15 overflow-hidden">
       {/* Big background text */}
@@ -57,6 +64,26 @@ export default function FooterSection({ onAdminOpen }: Props) {
                   </a>
                 </li>
               ))}
+              {/* Portal / Sign In link — always visible */}
+              <li>
+                {user ? (
+                  <Link to="/portal" className="text-white/35 hover:text-[#00FFFF] text-sm font-rajdhani transition-colors duration-300">
+                    👾 My Portal
+                  </Link>
+                ) : (
+                  <Link to="/auth" className="text-white/35 hover:text-[#00FFFF] text-sm font-rajdhani transition-colors duration-300">
+                    Sign In
+                  </Link>
+                )}
+              </li>
+              {/* Admin Panel — only shown when signed in as admin */}
+              {isAdmin && (
+                <li>
+                  <Link to="/admin" className="text-[#FFD700]/50 hover:text-[#FFD700] text-sm font-rajdhani transition-colors duration-300">
+                    ⚙ Admin Panel
+                  </Link>
+                </li>
+              )}
             </ul>
           </div>
 
@@ -99,12 +126,12 @@ export default function FooterSection({ onAdminOpen }: Props) {
           </p>
           <div className="flex items-center gap-4">
             <a href="#hero" className="text-white/20 hover:text-[#8B00FF] text-xs font-rajdhani tracking-wider transition-colors">↑ Back to Top</a>
-            <button
-              onClick={onAdminOpen}
-              className="text-white/10 hover:text-white/30 text-xs font-rajdhani tracking-wider transition-colors"
-            >
-              [admin]
-            </button>
+            {/* [admin] button — only rendered when signed in as admin */}
+            {isAdmin && (
+              <Link to="/admin" className="text-[#FFD700]/25 hover:text-[#FFD700] text-xs font-rajdhani tracking-wider transition-colors">
+                [admin]
+              </Link>
+            )}
           </div>
         </div>
       </div>

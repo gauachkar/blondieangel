@@ -1,4 +1,6 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
+import { useAuth } from "../../../contexts/AuthContext";
 
 const NAV_LINKS = ["About", "Menu", "Gallery", "VIP", "FAQ"];
 
@@ -16,6 +18,9 @@ interface Props { onChatOpen: () => void; }
 export default function HeroSection({ onChatOpen }: Props) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { user } = useAuth();
+  const ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL ?? "";
+  const isAdmin = !!user && (!ADMIN_EMAIL || user.email === ADMIN_EMAIL);
   const [typedText, setTypedText] = useState("");
   const phrases = ["Dominant Gamer. 🎮", "Anime Brat. 🌸", "Your Wallet's Weakness. 💜", "18 & Unbothered. 👑"];
   const phraseIdx = useRef(0);
@@ -108,6 +113,22 @@ export default function HeroSection({ onChatOpen }: Props) {
           </div>
 
           <div className="flex items-center gap-3">
+            {/* Portal / Sign In — visible to all on desktop */}
+            {user ? (
+              <Link to="/portal" className="hidden md:block text-white/50 hover:text-[#00FFFF] text-sm font-rajdhani font-semibold tracking-wider transition-colors">
+                👾 Portal
+              </Link>
+            ) : (
+              <Link to="/auth" className="hidden md:block text-white/50 hover:text-[#00FFFF] text-sm font-rajdhani font-semibold tracking-wider transition-colors">
+                Sign In
+              </Link>
+            )}
+            {/* Admin link — only shows when signed in as admin */}
+            {isAdmin && (
+              <Link to="/admin" className="hidden md:block text-[#FFD700]/60 hover:text-[#FFD700] text-xs font-rajdhani font-bold tracking-widest uppercase transition-colors">
+                ⚙ Admin
+              </Link>
+            )}
             <button
               onClick={onChatOpen}
               className="hidden md:flex items-center gap-2 bg-[#8B00FF] hover:bg-[#7a00e6] text-white px-5 py-2.5 rounded-full text-sm font-rajdhani font-bold tracking-wider transition-all duration-300 hover:scale-105 neon-border-purple"
@@ -136,6 +157,25 @@ export default function HeroSection({ onChatOpen }: Props) {
                 {item}
               </a>
             ))}
+            {/* Portal / Sign In in mobile menu */}
+            {user ? (
+              <Link to="/portal" onClick={() => setMenuOpen(false)}
+                className="block py-4 text-white/60 hover:text-[#00FFFF] font-rajdhani font-semibold tracking-widest uppercase text-sm border-b border-white/5">
+                👾 My Portal
+              </Link>
+            ) : (
+              <Link to="/auth" onClick={() => setMenuOpen(false)}
+                className="block py-4 text-white/60 hover:text-[#00FFFF] font-rajdhani font-semibold tracking-widest uppercase text-sm border-b border-white/5">
+                Sign In
+              </Link>
+            )}
+            {/* Admin Panel in mobile menu — only when admin */}
+            {isAdmin && (
+              <Link to="/admin" onClick={() => setMenuOpen(false)}
+                className="block py-4 text-[#FFD700]/60 hover:text-[#FFD700] font-rajdhani font-semibold tracking-widest uppercase text-sm border-b border-white/5">
+                ⚙ Admin Panel
+              </Link>
+            )}
             <button
               onClick={() => { setMenuOpen(false); onChatOpen(); }}
               className="mt-4 w-full bg-[#8B00FF] text-white py-3 rounded-full font-rajdhani font-bold tracking-wider"
