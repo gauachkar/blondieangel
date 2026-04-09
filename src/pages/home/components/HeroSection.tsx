@@ -19,8 +19,8 @@ export default function HeroSection({ onChatOpen }: Props) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const { user } = useAuth();
-  const ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL ?? "";
-  const isAdmin = !!user && (!ADMIN_EMAIL || user.email === ADMIN_EMAIL);
+  const ADMIN_EMAIL = (import.meta.env.VITE_ADMIN_EMAIL ?? "").trim().toLowerCase();
+  const isAdmin = !!user && (!ADMIN_EMAIL || user.email?.trim().toLowerCase() === ADMIN_EMAIL);
   const [typedText, setTypedText] = useState("");
   const phrases = ["Dominant Gamer. 🎮", "Anime Brat. 🌸", "Your Wallet's Weakness. 💜", "18 & Unbothered. 👑"];
   const phraseIdx = useRef(0);

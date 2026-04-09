@@ -17,12 +17,10 @@ const PLATFORMS = [
   { label: "Reddit", href: "https://reddit.com", color: "#FF4500", icon: "🔥" },
 ];
 
-interface Props { onAdminOpen: () => void; }
-
-export default function FooterSection({ onAdminOpen }: Props) {
+export default function FooterSection() {
   const { user } = useAuth();
-  const ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL ?? "";
-  const isAdmin = !!user && (!ADMIN_EMAIL || user.email === ADMIN_EMAIL);
+  const ADMIN_EMAIL = (import.meta.env.VITE_ADMIN_EMAIL ?? "").trim().toLowerCase();
+  const isAdmin = !!user && (!ADMIN_EMAIL || user.email?.trim().toLowerCase() === ADMIN_EMAIL);
 
   return (
     <footer className="relative w-full bg-[#060606] border-t border-[#8B00FF]/15 overflow-hidden">

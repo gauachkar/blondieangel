@@ -130,9 +130,9 @@ export default function PortalPage() {
                 </div>
               </div>
               {/* Upgrade CTA */}
-              <Link to="/#vip" className="block w-full text-center py-3 bg-[#8B00FF]/12 border border-[#8B00FF]/30 hover:border-[#8B00FF] hover:bg-[#8B00FF]/20 text-[#8B00FF] rounded-xl font-rajdhani font-bold text-sm tracking-wider transition-all">
+              <a href="/#vip" className="block w-full text-center py-3 bg-[#8B00FF]/12 border border-[#8B00FF]/30 hover:border-[#8B00FF] hover:bg-[#8B00FF]/20 text-[#8B00FF] rounded-xl font-rajdhani font-bold text-sm tracking-wider transition-all">
                 Upgrade Tier 👑
-              </Link>
+              </a>
             </div>
 
             {/* Recent sessions */}

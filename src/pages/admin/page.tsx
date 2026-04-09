@@ -545,9 +545,8 @@ export default function AdminPage() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [onlineStatus] = useLocalStore("ba_online", true);
 
-  const ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL ?? "";
-  // If VITE_ADMIN_EMAIL is unset, any authenticated user can access admin (dev mode)
-  const isAdmin = !ADMIN_EMAIL || user?.email === ADMIN_EMAIL;
+  const ADMIN_EMAIL = (import.meta.env.VITE_ADMIN_EMAIL ?? "").trim().toLowerCase();
+  const isAdmin = !ADMIN_EMAIL || user?.email?.trim().toLowerCase() === ADMIN_EMAIL;
 
   // Loading spinner
   if (loading) {
@@ -568,6 +567,7 @@ export default function AdminPage() {
         <span className="text-6xl">🚫</span>
         <h1 className="font-orbitron font-black text-white text-xl">Not Authorized</h1>
         <p className="text-white/40 font-rajdhani text-sm">Your account doesn't have admin access.</p>
+        <p className="text-white/20 font-mono text-xs bg-white/5 px-4 py-2 rounded-lg">Signed in as: {user.email}</p>
         <div className="flex gap-3">
           <Link to="/" className="px-6 py-3 bg-[#8B00FF] text-white rounded-full font-rajdhani font-bold text-sm tracking-wider">Back to Site</Link>
           <button onClick={() => signOut().then(() => window.location.reload())} className="px-6 py-3 border border-white/15 text-white/50 rounded-full font-rajdhani font-bold text-sm tracking-wider hover:border-white/30 transition-all">Sign Out</button>
