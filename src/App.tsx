@@ -6,11 +6,11 @@ import { useEffect } from "react";
 
 function App() {
   useEffect(() => {
-    document.title = "LilaVibes — Dominant Anime Gamer · Virtual Roleplay · 18+";
+    document.title = "Blondie Angel — Dominant Anime Gamer · Virtual Roleplay · 18+";
     const metas: Record<string, string> = {
-      description: "LilaVibes — fictional 45-year-old dominant anime gamer character. Virtual text-based adult roleplay entertainment. 18+ only. All content is fictional.",
-      "og:title": "LilaVibes — Virtual Roleplay Character",
-      "og:description": "Enter Lila's world. 25+ years of gaming & anime lore. Immersive text roleplay sessions, custom arcs, VIP membership. 18+ fictional entertainment.",
+      description: "Blondie Angel — 18-year-old dominant anime gamer brat. Premium adult content, text sessions, findom, feet content & more. 18+ only.",
+      "og:title": "Blondie Angel — Dominant Anime Gamer Brat",
+      "og:description": "Enter Blondie's world. Dominant sessions, findom, anime RP, gamer companion, feet content & custom arcs. VIP membership. 18+ only.",
       "og:type": "website",
       "theme-color": "#8B00FF",
     };

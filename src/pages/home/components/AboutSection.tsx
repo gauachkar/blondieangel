@@ -70,7 +70,7 @@ export default function AboutSection() {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <div className="h-px w-12 bg-[#FF1493]" style={{ boxShadow: "0 0 8px #FF1493" }} />
-              <span className="text-[#FF1493] text-xs font-rajdhani font-bold tracking-widest uppercase">About LilaVibes</span>
+              <span className="text-[#FF1493] text-xs font-rajdhani font-bold tracking-widest uppercase">About Blondie Angel</span>
             </div>
 
             <h2 className="font-orbitron font-black text-3xl md:text-4xl lg:text-5xl text-white leading-tight mb-8 glitch-text">

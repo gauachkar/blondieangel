@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const FAQS = [
   {
-    q: "Who exactly is LilaVibes?",
+    q: "Who exactly is Blondie Angel?",
     a: "Me. 18, dominant, anime gamer brat, and full-time content creator running a legit LLC in Arizona. I do text sessions, findom, feet content, anime RP, and gamer companion sessions. This is my real job and I love it. Any other questions?",
   },
   {

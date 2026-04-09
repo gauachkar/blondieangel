@@ -77,7 +77,7 @@ export default function FantasySpinner({ onClose }: Props) {
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div>
-            <h2 className="font-orbitron font-black text-xl shimmer-text">Lila's Loot Wheel</h2>
+            <h2 className="font-orbitron font-black text-xl shimmer-text">Blondie's Loot Wheel</h2>
             <p className="text-white/40 font-rajdhani text-xs tracking-widest mt-1">SPIN. WIN. TRY NOT TO FALL FOR ME.</p>
           </div>
           <button onClick={onClose} className="w-9 h-9 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-white/50 hover:text-white transition-all text-sm">

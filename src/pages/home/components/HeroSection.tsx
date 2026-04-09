@@ -89,8 +89,8 @@ export default function HeroSection({ onChatOpen }: Props) {
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
           <a href="#hero" className="flex items-center gap-2 group">
-            <span className="text-2xl font-orbitron font-black shimmer-text glitch">LILA</span>
-            <span className="text-2xl font-orbitron font-black text-[#FF1493]" style={{ textShadow: "0 0 15px #FF1493" }}>VIBES</span>
+            <span className="text-2xl font-orbitron font-black shimmer-text glitch">BLONDIE</span>
+            <span className="text-2xl font-orbitron font-black text-[#FF1493]" style={{ textShadow: "0 0 15px #FF1493" }}>ANGEL</span>
           </a>
 
           {/* Desktop nav */}
@@ -159,7 +159,7 @@ export default function HeroSection({ onChatOpen }: Props) {
             {/* Main headline */}
             <h1 className="font-orbitron font-black text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-4 glitch-text">
               I'm{" "}
-              <span className="shimmer-text">LilaVibes</span>
+              <span className="shimmer-text">Blondie Angel</span>
             </h1>
 
             {/* Typewriter */}
@@ -226,7 +226,7 @@ export default function HeroSection({ onChatOpen }: Props) {
 
                 {/* Name + status */}
                 <div className="text-center mb-4">
-                  <h2 className="font-orbitron font-black text-2xl shimmer-text">LilaVibes</h2>
+                  <h2 className="font-orbitron font-black text-2xl shimmer-text">Blondie Angel</h2>
                   <p className="text-white/50 text-sm font-rajdhani mt-1">Dominant · Findom · Anime · Gamer · 18</p>
                   <div className="flex items-center justify-center gap-2 mt-2">
                     <span className="w-2 h-2 bg-[#00FF00] rounded-full animate-pulse" />

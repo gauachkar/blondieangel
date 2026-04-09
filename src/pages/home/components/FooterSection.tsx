@@ -21,7 +21,7 @@ export default function FooterSection({ onAdminOpen }: Props) {
     <footer className="relative w-full bg-[#060606] border-t border-[#8B00FF]/15 overflow-hidden">
       {/* Big background text */}
       <div className="absolute bottom-0 left-0 right-0 flex justify-center overflow-hidden pointer-events-none select-none">
-        <span className="font-orbitron font-black text-[12vw] leading-none text-white/[0.015]">LILAVIBES</span>
+        <span className="font-orbitron font-black text-[12vw] leading-none text-white/[0.015]">BLONDIEANGEL</span>
       </div>
 
       {/* Grid bg */}
@@ -34,8 +34,8 @@ export default function FooterSection({ onAdminOpen }: Props) {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-1 mb-4">
-              <span className="font-orbitron font-black text-2xl shimmer-text">LILA</span>
-              <span className="font-orbitron font-black text-2xl text-[#FF1493]" style={{ textShadow: "0 0 12px #FF1493" }}>VIBES</span>
+              <span className="font-orbitron font-black text-2xl shimmer-text">BLONDIE</span>
+              <span className="font-orbitron font-black text-2xl text-[#FF1493]" style={{ textShadow: "0 0 12px #FF1493" }}>ANGEL</span>
             </div>
             <p className="text-white/35 text-sm font-inter leading-relaxed mb-5">
               Real 18+ adult content creator. Dominant anime gamer brat. Arizona LLC. All content produced by a verified adult. 18+ only.
@@ -95,7 +95,7 @@ export default function FooterSection({ onAdminOpen }: Props) {
         {/* Bottom bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-white/20 text-xs font-rajdhani text-center sm:text-left tracking-wider">
-            © {new Date().getFullYear()} LilaVibes LLC · All rights reserved · 18+ Adult content · Real creator · Real sessions
+            © {new Date().getFullYear()} Blondie Angel LLC · All rights reserved · 18+ Adult content · Real creator · Real sessions
           </p>
           <div className="flex items-center gap-4">
             <a href="#hero" className="text-white/20 hover:text-[#8B00FF] text-xs font-rajdhani tracking-wider transition-colors">↑ Back to Top</a>

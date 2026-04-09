@@ -149,7 +149,7 @@ export default function RequestForm() {
                 disabled={loading}
                 className="flex-1 bg-gradient-to-r from-[#8B00FF] to-[#FF1493] text-white py-4 rounded-full font-rajdhani font-bold text-base tracking-wider transition-all hover:scale-105 disabled:opacity-60 disabled:cursor-not-allowed neon-border-purple"
               >
-                {loading ? "⚡ Sending..." : "👑 Send It to Lila"}
+                {loading ? "⚡ Sending..." : "👑 Send It to Blondie"}
               </button>
               <p className="text-white/25 text-xs font-rajdhani text-center sm:text-right">
                 18+ only · Real sessions · Response within 24hrs

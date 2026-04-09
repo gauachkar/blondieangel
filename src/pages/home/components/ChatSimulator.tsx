@@ -15,7 +15,7 @@ const LILA_RESPONSES: Record<string, string[]> = {
     "Mmm. You're thinking too small. Tell me your kink and I'll show you what it actually looks like when a real woman runs this. 🎮",
     "Interesting. I've built entire session arcs out of less. Give me something to work with, simp. 🌸",
   ],
-  hello: ["Oh look, a new one. Welcome to my world. 🎮 I'm Lila — 18, dominant, anime gamer brat, and very much in charge. What are you booking?"],
+  hello: ["Oh look, a new one. Welcome to my world. 🎮 I'm Blondie — 18, dominant, anime gamer brat, and very much in charge. What are you booking?"],
   anime: ["Now you're speaking my language. Which series? Don't say 'something popular' — I want the specifics, and I will quiz you. 🌸"],
   game: ["Gamer RP? Pick your universe. I know my stuff and I'll stay in character and still roast you when you mess up — don't get it twisted. 🕹️"],
   findom: ["Pay up, loser. 💸 Tribute sessions start at $20. You'll love every second of being drained by someone who's better than you at everything. Check my menu."],
@@ -48,7 +48,7 @@ export default function ChatSimulator({ onClose }: Props) {
     {
       id: 0,
       from: "lila",
-      text: "You found me. 👑 I'm Lila — 18, dominant, real brat, full-time creator. Gamer, anime head, findom queen, and I already know why you're here. Roleplay? Findom? Feet? Tell me what you want and your budget. I don't do vague.",
+      text: "You found me. 👑 I'm Blondie — 18, dominant, real brat, full-time creator. Gamer, anime head, findom queen, and I already know why you're here. Roleplay? Findom? Feet? Tell me what you want and your budget. I don't do vague.",
       ts: ts(),
     },
   ]);
@@ -100,7 +100,7 @@ export default function ChatSimulator({ onClose }: Props) {
             <span className="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-[#00FF00] rounded-full border-2 border-[#0d0015] animate-pulse" />
           </div>
           <div className="flex-1 min-w-0">
-            <div className="font-orbitron font-bold text-white text-sm shimmer-text">LilaVibes</div>
+            <div className="font-orbitron font-bold text-white text-sm shimmer-text">Blondie Angel</div>
             <div className="flex items-center gap-2">
               <span className="text-[#00FF00] text-xs font-rajdhani">● Online · Open for Bookings</span>
             </div>

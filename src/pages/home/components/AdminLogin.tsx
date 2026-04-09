@@ -63,7 +63,7 @@ export default function AdminLogin({ onClose }: Props) {
             <>
               <div className="text-center mb-8">
                 <span className="text-5xl block mb-3 float-anim">👾</span>
-                <h2 className="font-orbitron font-black text-xl shimmer-text">LilaVibes Admin</h2>
+                <h2 className="font-orbitron font-black text-xl shimmer-text">Blondie Angel Admin</h2>
                 <p className="text-white/35 text-xs font-rajdhani mt-1 tracking-widest">AUTHORIZED PERSONNEL ONLY</p>
               </div>
 
@@ -75,7 +75,7 @@ export default function AdminLogin({ onClose }: Props) {
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="admin@lilavibes.com"
+                    placeholder="admin@blondieangel.com"
                     className="w-full bg-[#0d0d0d] border border-white/10 hover:border-[#8B00FF]/50 focus:border-[#8B00FF] text-white placeholder-white/25 px-4 py-3 rounded-xl font-inter text-sm outline-none transition-all"
                   />
                 </div>

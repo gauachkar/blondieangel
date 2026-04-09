@@ -61,7 +61,7 @@ export default function LiveStatusSection() {
               <span className="absolute -bottom-1 -right-1 w-4 h-4 bg-[#00FF00] rounded-full border-2 border-[#0A0A0A] animate-pulse" />
             </div>
             <div>
-              <div className="font-orbitron font-bold text-white text-lg">Lila is ONLINE</div>
+              <div className="font-orbitron font-bold text-white text-lg">Blondie is ONLINE</div>
               <div className="text-[#00FF00] text-sm font-rajdhani font-semibold">● Open for bookings — don't make her wait</div>
             </div>
           </div>

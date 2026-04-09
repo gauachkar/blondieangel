@@ -22,7 +22,7 @@ export default function PlatformsSection() {
           <h2 className="font-orbitron font-black text-3xl md:text-4xl text-white mb-3 glitch-text">
             My <span className="shimmer-text">Platforms</span>
           </h2>
-          <p className="text-white/40 font-rajdhani text-lg">Multiple ways to access Lila's world 🎮</p>
+          <p className="text-white/40 font-rajdhani text-lg">Multiple ways to access Blondie's world 🎮</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">

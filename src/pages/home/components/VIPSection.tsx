@@ -30,8 +30,8 @@ const TIERS = [
     price: "$59.99",
     period: "/mo",
     color: "#FFD700",
-    features: ["Everything in Obsessed", "Weekly 1-on-1 with Lila", "Name in story credits", "Custom character built for you"],
-    cta: "I Belong To Lila 👑",
+    features: ["Everything in Obsessed", "Weekly 1-on-1 with Blondie", "Name in story credits", "Custom character built for you"],
+    cta: "I Belong To Blondie 👑",
   },
 ];
 
@@ -49,7 +49,7 @@ export default function VIPSection() {
             <div className="h-px w-8 bg-[#FFD700]" />
           </div>
           <h2 className="font-orbitron font-black text-3xl md:text-5xl text-white mb-4 glitch-text">
-            Get <span className="shimmer-text">Owned By Lila</span>
+            Get <span className="shimmer-text">Owned By Blondie</span>
           </h2>
           <p className="text-white/50 font-rajdhani text-lg max-w-2xl mx-auto">
             You know you want in. Full access, priority treatment, exclusive drops, and a front-row seat to the chaos. Lurkers are boring. Subscribers get everything.
